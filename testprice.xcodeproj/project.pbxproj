@@ -26,6 +26,7 @@
 		967D297518955700002438CB /* trade_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296918955700002438CB /* trade_icon_1.png */; };
 		967D297618955700002438CB /* trade_icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296A18955700002438CB /* trade_icon_1@2x.png */; };
 		96BFC4B519A849A500C099FA /* bts.png in Resources */ = {isa = PBXBuildFile; fileRef = 96BFC4B419A849A500C099FA /* bts.png */; };
+		96BFC4BB19A8AD2C00C099FA /* TWStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BFC4BA19A8AD2C00C099FA /* TWStatus.m */; };
 		96E895B81882323700F5E4E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895B71882323700F5E4E7 /* Foundation.framework */; };
 		96E895BA1882323700F5E4E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895B91882323700F5E4E7 /* CoreGraphics.framework */; };
 		96E895BC1882323700F5E4E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895BB1882323700F5E4E7 /* UIKit.framework */; };
@@ -88,6 +89,8 @@
 		967D296918955700002438CB /* trade_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trade_icon_1.png; sourceTree = "<group>"; };
 		967D296A18955700002438CB /* trade_icon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trade_icon_1@2x.png"; sourceTree = "<group>"; };
 		96BFC4B419A849A500C099FA /* bts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bts.png; sourceTree = "<group>"; };
+		96BFC4B919A8AD2C00C099FA /* TWStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWStatus.h; sourceTree = "<group>"; };
+		96BFC4BA19A8AD2C00C099FA /* TWStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWStatus.m; sourceTree = "<group>"; };
 		96E895B41882323700F5E4E7 /* 小智慧.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小智慧.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E895B71882323700F5E4E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96E895B91882323700F5E4E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -222,6 +225,8 @@
 				96E899221886BA3F00F5E4E7 /* DataModel */,
 				96E895C61882323700F5E4E7 /* AppDelegate.h */,
 				96E895C71882323700F5E4E7 /* AppDelegate.m */,
+				96BFC4B919A8AD2C00C099FA /* TWStatus.h */,
+				96BFC4BA19A8AD2C00C099FA /* TWStatus.m */,
 				96E895C91882323700F5E4E7 /* Main.storyboard */,
 				96E896811883B3BC00F5E4E7 /* NetWorker.h */,
 				96E896821883B3BC00F5E4E7 /* NetWorker.m */,
@@ -413,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BFC4BB19A8AD2C00C099FA /* TWStatus.m in Sources */,
 				96E8963E1882C08D00F5E4E7 /* MJRefreshFooterView.m in Sources */,
 				96E895CE1882323700F5E4E7 /* RootCoinViewController.m in Sources */,
 				96E8963F1882C08D00F5E4E7 /* MJRefreshHeaderView.m in Sources */,

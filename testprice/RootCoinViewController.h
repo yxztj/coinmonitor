@@ -11,7 +11,7 @@
 #import "PriceDataSet.h"
 
 #import "HVTableView.h"
-
+#import "SvStatusBarTipsWindow.h"
 
 
 

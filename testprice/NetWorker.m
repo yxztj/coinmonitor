@@ -10,6 +10,7 @@
 #import "ProgressHUD.h"
 #import "PriceDataElement.h"
 #import "PriceDataSet.h"
+#import "TWStatus.h"
 
 @implementation NetWorker
 
@@ -118,12 +119,23 @@
 
 - (void)PopSuccessMessage
 {
-    [ProgressHUD showSuccess:@"刷新成功"];
+    [TWStatus showStatus:@"刷新成功"];
+    [TWStatus dismissAfter:2];
+
+
+//    [ProgressHUD showSuccess:@""];
 }
 
 - (void)PopErrorMessage
 {
-    [ProgressHUD showError:@"网络错误"];
+    [TWStatus showStatus:@"网络错误"];
+    [TWStatus dismissAfter:2];
+
+}
+
+- (void)dismissMessage
+{
+    [TWStatus dismissAfter:2000];
 }
 
 -(void)UpdateBTCChina

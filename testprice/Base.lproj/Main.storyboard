@@ -96,43 +96,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的关注" id="XLM-Ib-5Ig">
-                        <barButtonItem key="leftBarButtonItem" title="添加" style="plain" id="Kh4-W5-zZQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IfV-TR-06e">
-                                <rect key="frame" x="16" y="5" width="71" height="33"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Twd-OZ-d06">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XWS-Nh-8Qz">
+                                <rect key="frame" x="233" y="5" width="71" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="添加">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NE1-8v-YRJ" kind="push" identifier="maintoadd" id="YrC-2O-66V"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Fgy-d5-nVD">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xsv-C7-pdd">
-                                <rect key="frame" x="233" y="5" width="71" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="编辑">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BhA-B8-fe3"/>
+                                    <segue destination="NE1-8v-YRJ" kind="push" id="oO8-Fe-e61"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnAdd" destination="IfV-TR-06e" id="YeA-np-gTz"/>
-                        <outlet property="btnEdit" destination="xsv-C7-pdd" id="VgN-57-esd"/>
                         <outlet property="myTable" destination="0c8-Tj-pPr" id="JhU-AS-ANg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <customObject id="6N3-8E-DaK" customClass="TableDataDelegate"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="49"/>
+            <point key="canvasLocation" x="1089" y="49"/>
         </scene>
         <!--Add Coin View Controller - 选择虚拟货币-->
         <scene sceneID="Gof-6E-vzH">
@@ -159,7 +144,7 @@
                                 <rect key="frame" x="233" y="5" width="71" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="添加">
+                                <state key="normal" title="完成">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

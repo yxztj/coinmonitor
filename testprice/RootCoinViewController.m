@@ -15,6 +15,7 @@
 #import "NetWorker.h"
 #import "TableDataDelegate.h"
 #import "PickerDataDelegate.h"
+#import "TWStatus.h"
 #import "ProgressHUD/ProgressHUD.h"
 
 NSString *const MJTableViewCellIdentifier = @"Cell";
@@ -137,8 +138,10 @@ NSString *const MJTableViewCellIdentifier = @"Cell";
     self.nworker.updateMain=YES;
     [self.nworker.hasJobToDo signal];
     [self.nworker.hasJobToDo unlock];
+    [TWStatus showLoadingWithStatus:@"自动刷新中"];
     
-    [ProgressHUD show:@"正在刷新"];
+    //[[SvStatusBarTipsWindow shareTipsWindow] showTips:@"正在刷新"];
+    //[ProgressHUD show:@"正在刷新"];
 }
 
 - (void) shadeOtherCells:(CGRect)rect

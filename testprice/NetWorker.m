@@ -119,7 +119,7 @@
 
 - (void)PopSuccessMessage
 {
-    [TWStatus showStatus:@"刷新成功"];
+    [TWStatus showStatus:@"√ 刷新成功"];
     [TWStatus dismissAfter:2];
 
 
@@ -128,7 +128,7 @@
 
 - (void)PopErrorMessage
 {
-    [TWStatus showStatus:@"网络错误"];
+    [TWStatus showStatus:@"☓ 网络错误"];
     [TWStatus dismissAfter:2];
 
 }

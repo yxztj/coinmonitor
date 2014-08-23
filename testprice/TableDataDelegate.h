@@ -11,7 +11,7 @@
 #import "HVTableView.h"
 #import "RootCoinViewController.h"
 
-#define CELLHEIGHTFOLDED 68
+#define CELLHEIGHTFOLDED 88
 #define CELLHEIGHTEXPANDED 140
 
 @interface TableDataDelegate : NSObject<UITableViewDataSource,UITableViewDelegate>

@@ -273,20 +273,12 @@
 
 -(void)UpdateBTC38
 {
-    NSURL *url = [NSURL URLWithString:@"http://www.btc38.com/httpAPI.php"];
+    NSURL *url = [NSURL URLWithString:@"http://api.btc38.com/v1/ticker.php?c=all&mk_type=cny"];
     //第二步，通过URL创建网络请求
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                              timeoutInterval:10];
     //第三步，连接服务器,发送同步请求
     NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    
-//    if (received==nil) {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"网络错误" message:@"你的网络不给力，重新试试吧！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//        
-//        [alert show];
-//        
-//        return;
-//    }
     
     NSString *str = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
     //NSLog(@"data is :%@",str);
@@ -307,12 +299,30 @@
     NSString* timeString = [dateFormat stringFromDate:now];
     //[dateFormat release];
     //[now release];
-    //NSString *price =[dicInfo objectForKey:@"last"];
-    
-    //[self.dataset updateCoinPrice:@"PPC" price:[dic objectForKey:@"ppc2cny"]];
-    [self.dataset updateCoinPrice:@"BTC38" coinname:@"PPC" price:[dic objectForKey:@"ppc2cny"]];
-    [self.dataset updateCoinPrice:@"BTC38" coinname:@"PTS" price:[dic objectForKey:@"pts2cny"]];
-    [self.dataset updateCoinPrice:@"BTC38" coinname:@"BTSX" price:[dic objectForKey:@"btsx2cny"]];
+
+    for (NSString *coinname in [dic allKeys]) {
+        NSSet *coins = [[NSSet alloc] initWithObjects:
+        @"ppc",@"pts",@"btsx",nil];
+        
+        if ([coins containsObject:coinname]) {
+            NSDictionary *ticker = [[dic objectForKey:coinname] objectForKey:@"ticker"];
+            [self.dataset updateCoinPrice:@"BTC38" coinname:coinname.uppercaseString price:[ticker objectForKey:@"last"]];
+            
+            PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"BTC38" coinname:coinname.uppercaseString];
+            element.highest = [[ticker objectForKey:@"high"] floatValue];
+            element.lowest=[[ticker objectForKey:@"low"] floatValue];
+            element.volume=[[ticker objectForKey:@"vol"] floatValue];
+            
+        }
+    }
+//    [self.dataset updateCoinPrice:@"BTC38" coinname:@"PPC" price:[[[dic objectForKey:@"ppc"] objectForKey:@"ticker"] objectForKey:@"last"]];
+//    PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"BTCChina" coinname:@"LTC"];
+////    element.highest=[[dic objectForKey:@"high"]floatValue];
+////    element.lowest=[[dic objectForKey:@"low"]floatValue];
+////    element.volume=[[dic objectForKey:@"vol"]floatValue];
+//    
+//    [self.dataset updateCoinPrice:@"BTC38" coinname:@"PTS" price:[dic objectForKey:@"pts2cny"]];
+//    [self.dataset updateCoinPrice:@"BTC38" coinname:@"BTSX" price:[dic objectForKey:@"btsx2cny"]];
     //[self.dataset updateCoinPrice:@"PTS" price:[dic objectForKey:@"pts2cny"]];
     
     

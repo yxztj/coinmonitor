@@ -182,11 +182,11 @@
     lblPrice.text = [coinname isEqualToString:@"BTSX"] ? [NSString stringWithFormat:@"￥%0.4f", price] : [NSString stringWithFormat:@"￥%0.2f", price];
     lblTime.text = [NSString stringWithFormat:@"%@", timeString];
     lblMarket.text = marketname;
-    if (![marketname isEqualToString:@"BTC38"]) {
-        lblHigh.text = [NSString stringWithFormat:@"%0.2f", element.highest];
-        lblLow.text = [NSString stringWithFormat:@"%0.2f", element.lowest];
-        lblVol.text = [NSString stringWithFormat:@"%0.2f", element.volume];
-    }
+
+    lblHigh.text = [NSString stringWithFormat:@"高:  %0.2f", element.highest];
+    lblLow.text = [NSString stringWithFormat:@"低:  %0.2f", element.lowest];
+    lblVol.text = [NSString stringWithFormat:@"量:  %0.2f", element.volume];
+    
     
     
     imgCoin.image = [UIImage imageNamed:[PriceDataSet getImageName:coinname]];

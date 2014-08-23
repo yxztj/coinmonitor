@@ -140,22 +140,27 @@
 
 -(void)UpdateBTCChina
 {
-    [self UpdateBTCChinaBTC];
-    [self UpdateBTCChinaLTC];
+    NSSet *coins = [[NSSet alloc] initWithObjects:
+                    @"btc",@"ltc",nil];
     
+    for (NSString* coinname in coins) {
+        [self UpdateBTCChina:coinname];
+    }
 }
 
 -(void)UpdateOKCoin
 {
-    [self UpdateOKCoinBTC];
-    [self UpdateOKCoinLTC];
+    NSSet *coins = [[NSSet alloc] initWithObjects:
+                    @"btc",@"ltc",nil];
     
+    for (NSString* coinname in coins) {
+        [self UpdateOKCoin:coinname];
+    }
 }
 
--(void)UpdateOKCoinLTC
+-(void)UpdateOKCoin:(NSString*)coinname
 {
-    
-    NSURL *url = [NSURL URLWithString:@"https://www.okcoin.com/api/ticker.do?symbol=ltc_cny"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.okcoin.com/api/ticker.do?symbol=%@_cny", coinname]];
     //第二步，通过URL创建网络请求
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                              timeoutInterval:10];
@@ -170,15 +175,11 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableLeaves error:&error];
     NSDictionary *dicInfo = [dic objectForKey:@"ticker"];
     
-    //NSString *strMessage = [NSString stringWithFormat:@"LTC的价格是 %@  ",[dicInfo objectForKey:@"last"]];
-    
-    //[dateFormat release];
-    //[now release];
     NSString *price =[dicInfo objectForKey:@"last"];
     
     [self.dataset updateCoinPrice:@"OKCoin" coinname:@"LTC" price:price];
     
-    PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"OKCoin" coinname:@"LTC"];
+    PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"OKCoin" coinname:coinname.uppercaseString];
     element.highest=[[dicInfo objectForKey:@"high"]floatValue];
     element.lowest=[[dicInfo objectForKey:@"low"]floatValue];
     element.volume=[[dicInfo objectForKey:@"vol"]floatValue];
@@ -186,11 +187,10 @@
     //NSLog(@"Get data from dataset, price is: %f", [self.dataset getCurrentCoinPrice:@"LTC"]);
 }
 
-
--(void)UpdateOKCoinBTC
+-(void)UpdateBTCChina:(NSString*)coinname
 {
     //先比特币
-    NSURL *url = [NSURL URLWithString:@"https://www.okcoin.com/api/ticker.do"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://data.btcchina.com/data/ticker?market=%@cny", coinname]];
     //第二步，通过URL创建网络请求
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                              timeoutInterval:10];
@@ -204,80 +204,13 @@
     //从返回数据中获取价格信息
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableLeaves error:&error];
     NSDictionary *dicInfo = [dic objectForKey:@"ticker"];
-    
-    //NSString *strMessage = [NSString stringWithFormat:@"LTC的价格是 %@  ",[dicInfo objectForKey:@"last"]];
-    
-    //[dateFormat release];
-    //[now release];
-    NSString *price =[dicInfo objectForKey:@"last"];
-    
-    [self.dataset updateCoinPrice:@"OKCoin" coinname:@"BTC" price:price];
-    
-    PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"OKCoin" coinname:@"BTC"];
-    element.highest=[[dicInfo objectForKey:@"high"]floatValue];
-    element.lowest=[[dicInfo objectForKey:@"low"]floatValue];
-    element.volume=[[dicInfo objectForKey:@"vol"]floatValue];
-}
 
--(void)UpdateBTCChinaBTC
-{
-    //先比特币
-    NSURL *url = [NSURL URLWithString:@"https://data.btcchina.com/data/ticker"];
-    //第二步，通过URL创建网络请求
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
-                                             timeoutInterval:10];
-    //第三步，连接服务器,发送同步请求
-    NSError *error;
-    NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    
-    NSString *str = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
-    //NSLog(@"data is :%@",str);
-    
-    //从返回数据中获取价格信息
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableLeaves error:&error];
-    NSDictionary *dicInfo = [dic objectForKey:@"ticker"];
-    
-    //NSString *strMessage = [NSString stringWithFormat:@"LTC的价格是 %@  ",[dicInfo objectForKey:@"last"]];
-    
-    //[dateFormat release];
     //[now release];
     NSString *price =[dicInfo objectForKey:@"last"];
     
-    [self.dataset updateCoinPrice:@"BTCChina" coinname:@"BTC" price:price];
+    [self.dataset updateCoinPrice:@"BTCChina" coinname:coinname.uppercaseString price:price];
     
-    PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"BTCChina" coinname:@"BTC"];
-    element.highest=[[dicInfo objectForKey:@"high"]floatValue];
-    element.lowest=[[dicInfo objectForKey:@"low"]floatValue];
-    element.volume=[[dicInfo objectForKey:@"vol"]floatValue];
-}
-
--(void)UpdateBTCChinaLTC
-{
-    //莱特币
-    NSURL *url = [NSURL URLWithString:@"https://data.btcchina.com/data/ticker?market=ltccny"];
-    //第二步，通过URL创建网络请求
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
-                                             timeoutInterval:10];
-    //第三步，连接服务器,发送同步请求
-    NSError *error;
-    NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    
-    NSString *str = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
-    //NSLog(@"data is :%@",str);
-    
-    //从返回数据中获取价格信息
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableLeaves error:&error];
-    NSDictionary *dicInfo = [dic objectForKey:@"ticker"];
-    
-    //NSString *strMessage = [NSString stringWithFormat:@"LTC的价格是 %@  ",[dicInfo objectForKey:@"last"]];
-    
-    //[dateFormat release];
-    //[now release];
-    NSString *price =[dicInfo objectForKey:@"last"];
-    
-    [self.dataset updateCoinPrice:@"BTCChina" coinname:@"LTC" price:price];
-    
-    PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"BTCChina" coinname:@"LTC"];
+    PriceDataElement *element=[self.dataset getCoinElementFromMarket:@"BTCChina" coinname:coinname.uppercaseString];
     element.highest=[[dicInfo objectForKey:@"high"]floatValue];
     element.lowest=[[dicInfo objectForKey:@"low"]floatValue];
     element.volume=[[dicInfo objectForKey:@"vol"]floatValue];

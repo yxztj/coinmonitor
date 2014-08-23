@@ -97,33 +97,7 @@ NSString *const MJTableViewCellIdentifier = @"Cell";
     [self.nworker StartPumping];
     
     [self addHeader];
-    //[NSThread detachNewThreadSelector:@selector(workerproc) toTarget:self withObject:nil];
-    //worker = [NSThread detachNewThreadSelector:@selector(workerproc) toTarget:self withObject:nil];
     
-    /////////////SETTING TABLEVIEW LAYOUT
-//    [self.myTable setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    NSLayoutConstraint* myTableWidthCon = [NSLayoutConstraint constraintWithItem:self.myTable attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:320];
-//    NSLayoutConstraint* myTableBottomCon = [NSLayoutConstraint constraintWithItem:self.myTable attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-50];
-//    NSLayoutConstraint* myTableCenterXCon = [NSLayoutConstraint constraintWithItem:self.myTable attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
-//    NSLayoutConstraint* myTableTopCon = [NSLayoutConstraint constraintWithItem:self.myTable attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:60];
-//    [self.view addConstraints:@[myTableBottomCon, myTableCenterXCon, myTableWidthCon, myTableTopCon]];
-    
-    //[self.nworker UpdateOKCoinBTCDetail];
-    
-    
-    self.upperShadeView=[[UIView alloc]initWithFrame:CGRectMake(0,0,320,320)];
-    self.upperShadeView.backgroundColor=[UIColor blackColor];
-    self.upperShadeView.alpha=0;
-    self.lowerShadeView=[[UIView alloc]initWithFrame:CGRectMake(0,0,320,320)];
-    self.lowerShadeView.backgroundColor=[UIColor blackColor];
-    self.lowerShadeView.alpha=0;
-    self.upperShadeView.layer.zPosition=100;
-    [self.view addSubview:self.upperShadeView];
-    [self.view addSubview:self.lowerShadeView];
-    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self.tabledataDelegate action:@selector(deselectCell)];
-    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] initWithTarget:self.tabledataDelegate action:@selector(deselectCell)];
-    [self.upperShadeView addGestureRecognizer:tap1];
-    [self.lowerShadeView addGestureRecognizer:tap2];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshData:)
                                                  name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -144,53 +118,6 @@ NSString *const MJTableViewCellIdentifier = @"Cell";
     //[ProgressHUD show:@"正在刷新"];
 }
 
-- (void) shadeOtherCells:(CGRect)rect
-{
-    
-    int cellheightchange = CELLHEIGHTEXPANDED - CELLHEIGHTFOLDED;
-    
-    float top=self.navigationController.navigationBar.frame.origin.y+ self.navigationController.navigationBar.frame.size.height;
-    self.upperShadeView.layer.zPosition=100;
-    self.lowerShadeView.layer.zPosition=100;
-    self.myTable.scrollEnabled=NO;
-    float bottom=[[UIScreen mainScreen]bounds].size.height-self.tabBarController.tabBar.frame.size.height;
-    [self.upperShadeView setFrame:CGRectMake(0, top, 320, rect.origin.y+1)];
-    float lowerheight=[[UIScreen mainScreen]bounds].size.height-self.tabBarController.tabBar.frame.size.height-rect.origin.y-rect.size.height-self.navigationController.navigationBar.frame.origin.y;
-    
-    self.upperShadeView.userInteractionEnabled=YES;
-    self.lowerShadeView.userInteractionEnabled=YES;
-    
-    //CGRect rectLowerFrom=CGRectMake(0, top+rect.origin.y+rect.size.height-53, 320, lowerheight+53);
-    [self.lowerShadeView setFrame:CGRectMake(0, top+rect.origin.y+rect.size.height-cellheightchange, 320, lowerheight+cellheightchange)];
-    
-    [UIView animateWithDuration:0.3 delay:0.0 options:nil animations:^{
-        [self.lowerShadeView setFrame:CGRectMake(0, top+rect.origin.y+rect.size.height, 320, lowerheight)];
-        self.upperShadeView.alpha=0.2;
-        self.lowerShadeView.alpha=0.2;
-    } completion:nil];
-    
-}
-
-- (void) removeShade
-{
-    int cellheightchange = CELLHEIGHTEXPANDED - CELLHEIGHTFOLDED;
-    self.upperShadeView.userInteractionEnabled=NO;
-    self.lowerShadeView.userInteractionEnabled=NO;
-    self.myTable.scrollEnabled=YES;
-    [UIView animateWithDuration:0.3 animations:^{
-        self.upperShadeView.alpha=0;
-        self.lowerShadeView.alpha=0;
-
-        CGRect rect = CGRectMake(self.lowerShadeView.frame.origin.x, self.lowerShadeView.frame.origin.y-cellheightchange, self.lowerShadeView.frame.size.width, self.lowerShadeView.frame.size.height+cellheightchange);
-        [self.lowerShadeView setFrame:rect];
-    }completion:^(BOOL finished){
-        self.upperShadeView.layer.zPosition=-100;
-        self.lowerShadeView.layer.zPosition=-100;
-    }];
-
-    
-    
-}
 
 - (void)didReceiveMemoryWarning
 {

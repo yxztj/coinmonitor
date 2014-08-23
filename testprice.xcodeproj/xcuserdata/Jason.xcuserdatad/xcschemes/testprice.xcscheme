@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "96E895B31882323700F5E4E7"
-               BuildableName = "testprice.app"
+               BuildableName = "&#23567;&#26234;&#24935;.app"
                BlueprintName = "testprice"
                ReferencedContainer = "container:testprice.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E895B31882323700F5E4E7"
-            BuildableName = "testprice.app"
+            BuildableName = "&#23567;&#26234;&#24935;.app"
             BlueprintName = "testprice"
             ReferencedContainer = "container:testprice.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E895B31882323700F5E4E7"
-            BuildableName = "testprice.app"
+            BuildableName = "&#23567;&#26234;&#24935;.app"
             BlueprintName = "testprice"
             ReferencedContainer = "container:testprice.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E895B31882323700F5E4E7"
-            BuildableName = "testprice.app"
+            BuildableName = "&#23567;&#26234;&#24935;.app"
             BlueprintName = "testprice"
             ReferencedContainer = "container:testprice.xcodeproj">
          </BuildableReference>

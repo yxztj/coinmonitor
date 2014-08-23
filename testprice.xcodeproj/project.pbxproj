@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961DD03218882A0F0037D248 /* AddCoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961DD03118882A0F0037D248 /* AddCoinViewController.m */; };
+		96524BC41886CF7300E33346 /* MonitorPriceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96524BC31886CF7300E33346 /* MonitorPriceItem.m */; };
+		96524BCF1887FFA500E33346 /* TableDataDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96524BCE1887FFA500E33346 /* TableDataDelegate.m */; };
+		96524BD118880AF500E33346 /* monitor_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96524BD018880AF500E33346 /* monitor_list.plist */; };
+		96524BD318880B2A00E33346 /* market_coin.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96524BD218880B2A00E33346 /* market_coin.plist */; };
+		96524BD61888191B00E33346 /* PickerDataDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96524BD51888191B00E33346 /* PickerDataDelegate.m */; };
+		96590C15188AC64B00D17A8B /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96590C12188AC64B00D17A8B /* ProgressHUD.bundle */; };
+		96590C16188AC64B00D17A8B /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 96590C14188AC64B00D17A8B /* ProgressHUD.m */; };
+		96590C21188D3B4200D17A8B /* MarketDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96590C1F188D3B4200D17A8B /* MarketDetailView.m */; };
+		967D296C18955700002438CB /* btc.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296018955700002438CB /* btc.png */; };
+		967D296D18955700002438CB /* combo_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296118955700002438CB /* combo_chart.png */; };
+		967D296E18955700002438CB /* combo_chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296218955700002438CB /* combo_chart@2x.png */; };
+		967D296F18955700002438CB /* expandGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296318955700002438CB /* expandGlyph.png */; };
+		967D297118955700002438CB /* ltc.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296518955700002438CB /* ltc.png */; };
+		967D297318955700002438CB /* ppc.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296718955700002438CB /* ppc.png */; };
+		967D297418955700002438CB /* pts.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296818955700002438CB /* pts.png */; };
+		967D297518955700002438CB /* trade_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296918955700002438CB /* trade_icon_1.png */; };
+		967D297618955700002438CB /* trade_icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D296A18955700002438CB /* trade_icon_1@2x.png */; };
+		96BFC4B519A849A500C099FA /* bts.png in Resources */ = {isa = PBXBuildFile; fileRef = 96BFC4B419A849A500C099FA /* bts.png */; };
 		96E895B81882323700F5E4E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895B71882323700F5E4E7 /* Foundation.framework */; };
 		96E895BA1882323700F5E4E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895B91882323700F5E4E7 /* CoreGraphics.framework */; };
 		96E895BC1882323700F5E4E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895BB1882323700F5E4E7 /* UIKit.framework */; };
@@ -14,13 +33,23 @@
 		96E895C41882323700F5E4E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E895C31882323700F5E4E7 /* main.m */; };
 		96E895C81882323700F5E4E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E895C71882323700F5E4E7 /* AppDelegate.m */; };
 		96E895CB1882323700F5E4E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E895C91882323700F5E4E7 /* Main.storyboard */; };
-		96E895CE1882323700F5E4E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E895CD1882323700F5E4E7 /* ViewController.m */; };
+		96E895CE1882323700F5E4E7 /* RootCoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E895CD1882323700F5E4E7 /* RootCoinViewController.m */; };
 		96E895D01882323700F5E4E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E895CF1882323700F5E4E7 /* Images.xcassets */; };
 		96E895D71882323700F5E4E7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895D61882323700F5E4E7 /* XCTest.framework */; };
 		96E895D81882323700F5E4E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895B71882323700F5E4E7 /* Foundation.framework */; };
 		96E895D91882323700F5E4E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E895BB1882323700F5E4E7 /* UIKit.framework */; };
 		96E895E11882323700F5E4E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E895DF1882323700F5E4E7 /* InfoPlist.strings */; };
 		96E895E31882323700F5E4E7 /* testpriceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E895E21882323700F5E4E7 /* testpriceTests.m */; };
+		96E8962F1882BE5F00F5E4E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E8962E1882BE5F00F5E4E7 /* QuartzCore.framework */; };
+		96E8963B1882C08D00F5E4E7 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96E896311882C08D00F5E4E7 /* MJRefresh.bundle */; };
+		96E8963C1882C08D00F5E4E7 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E896341882C08D00F5E4E7 /* MJRefreshBaseView.m */; };
+		96E8963D1882C08D00F5E4E7 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E896361882C08D00F5E4E7 /* MJRefreshConst.m */; };
+		96E8963E1882C08D00F5E4E7 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E896381882C08D00F5E4E7 /* MJRefreshFooterView.m */; };
+		96E8963F1882C08D00F5E4E7 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E8963A1882C08D00F5E4E7 /* MJRefreshHeaderView.m */; };
+		96E896831883B3BC00F5E4E7 /* NetWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E896821883B3BC00F5E4E7 /* NetWorker.m */; };
+		96E896861883B41100F5E4E7 /* PriceDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E896851883B41100F5E4E7 /* PriceDataSet.m */; };
+		96E896891883B46500F5E4E7 /* PriceDataElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E896881883B46500F5E4E7 /* PriceDataElement.m */; };
+		96E899251886BABE00F5E4E7 /* Markets.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E899241886BABE00F5E4E7 /* Markets.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +63,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		96E895B41882323700F5E4E7 /* testprice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testprice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		961DD03018882A0F0037D248 /* AddCoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCoinViewController.h; sourceTree = "<group>"; };
+		961DD03118882A0F0037D248 /* AddCoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCoinViewController.m; sourceTree = "<group>"; };
+		96524BC21886CF7300E33346 /* MonitorPriceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorPriceItem.h; sourceTree = "<group>"; };
+		96524BC31886CF7300E33346 /* MonitorPriceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorPriceItem.m; sourceTree = "<group>"; };
+		96524BCD1887FFA500E33346 /* TableDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDataDelegate.h; sourceTree = "<group>"; };
+		96524BCE1887FFA500E33346 /* TableDataDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDataDelegate.m; sourceTree = "<group>"; };
+		96524BD018880AF500E33346 /* monitor_list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = monitor_list.plist; sourceTree = "<group>"; };
+		96524BD218880B2A00E33346 /* market_coin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = market_coin.plist; sourceTree = "<group>"; };
+		96524BD41888191B00E33346 /* PickerDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerDataDelegate.h; sourceTree = "<group>"; };
+		96524BD51888191B00E33346 /* PickerDataDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerDataDelegate.m; sourceTree = "<group>"; };
+		96590C12188AC64B00D17A8B /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		96590C13188AC64B00D17A8B /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		96590C14188AC64B00D17A8B /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		96590C1E188D3B4200D17A8B /* MarketDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketDetailView.h; sourceTree = "<group>"; };
+		96590C1F188D3B4200D17A8B /* MarketDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketDetailView.m; sourceTree = "<group>"; };
+		967D296018955700002438CB /* btc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btc.png; sourceTree = "<group>"; };
+		967D296118955700002438CB /* combo_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combo_chart.png; sourceTree = "<group>"; };
+		967D296218955700002438CB /* combo_chart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "combo_chart@2x.png"; sourceTree = "<group>"; };
+		967D296318955700002438CB /* expandGlyph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expandGlyph.png; sourceTree = "<group>"; };
+		967D296518955700002438CB /* ltc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ltc.png; sourceTree = "<group>"; };
+		967D296718955700002438CB /* ppc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ppc.png; sourceTree = "<group>"; };
+		967D296818955700002438CB /* pts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pts.png; sourceTree = "<group>"; };
+		967D296918955700002438CB /* trade_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trade_icon_1.png; sourceTree = "<group>"; };
+		967D296A18955700002438CB /* trade_icon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trade_icon_1@2x.png"; sourceTree = "<group>"; };
+		96BFC4B419A849A500C099FA /* bts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bts.png; sourceTree = "<group>"; };
+		96E895B41882323700F5E4E7 /* 小智慧.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小智慧.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E895B71882323700F5E4E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96E895B91882323700F5E4E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		96E895BB1882323700F5E4E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -45,14 +99,33 @@
 		96E895C61882323700F5E4E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96E895C71882323700F5E4E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		96E895CA1882323700F5E4E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		96E895CC1882323700F5E4E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96E895CD1882323700F5E4E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96E895CC1882323700F5E4E7 /* RootCoinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootCoinViewController.h; sourceTree = "<group>"; };
+		96E895CD1882323700F5E4E7 /* RootCoinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootCoinViewController.m; sourceTree = "<group>"; };
 		96E895CF1882323700F5E4E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96E895D51882323700F5E4E7 /* testpriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testpriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E895D61882323700F5E4E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		96E895DE1882323700F5E4E7 /* testpriceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testpriceTests-Info.plist"; sourceTree = "<group>"; };
 		96E895E01882323700F5E4E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96E895E21882323700F5E4E7 /* testpriceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testpriceTests.m; sourceTree = "<group>"; };
+		96E8962E1882BE5F00F5E4E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		96E896311882C08D00F5E4E7 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		96E896321882C08D00F5E4E7 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		96E896331882C08D00F5E4E7 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		96E896341882C08D00F5E4E7 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		96E896351882C08D00F5E4E7 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		96E896361882C08D00F5E4E7 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		96E896371882C08D00F5E4E7 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		96E896381882C08D00F5E4E7 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		96E896391882C08D00F5E4E7 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		96E8963A1882C08D00F5E4E7 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		96E896811883B3BC00F5E4E7 /* NetWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorker.h; sourceTree = "<group>"; };
+		96E896821883B3BC00F5E4E7 /* NetWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorker.m; sourceTree = "<group>"; };
+		96E896841883B41100F5E4E7 /* PriceDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PriceDataSet.h; path = ../PriceDataSet.h; sourceTree = "<group>"; };
+		96E896851883B41100F5E4E7 /* PriceDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PriceDataSet.m; path = ../PriceDataSet.m; sourceTree = "<group>"; };
+		96E896871883B46500F5E4E7 /* PriceDataElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDataElement.h; sourceTree = "<group>"; };
+		96E896881883B46500F5E4E7 /* PriceDataElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDataElement.m; sourceTree = "<group>"; };
+		96E899231886BABE00F5E4E7 /* Markets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Markets.h; sourceTree = "<group>"; };
+		96E899241886BABE00F5E4E7 /* Markets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Markets.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E8962F1882BE5F00F5E4E7 /* QuartzCore.framework in Frameworks */,
 				96E895BA1882323700F5E4E7 /* CoreGraphics.framework in Frameworks */,
 				96E895BC1882323700F5E4E7 /* UIKit.framework in Frameworks */,
 				96E895B81882323700F5E4E7 /* Foundation.framework in Frameworks */,
@@ -79,6 +153,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96590C11188AC64B00D17A8B /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				96590C12188AC64B00D17A8B /* ProgressHUD.bundle */,
+				96590C13188AC64B00D17A8B /* ProgressHUD.h */,
+				96590C14188AC64B00D17A8B /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		967D295E18955700002438CB /* pics */ = {
+			isa = PBXGroup;
+			children = (
+				967D296018955700002438CB /* btc.png */,
+				967D296118955700002438CB /* combo_chart.png */,
+				96BFC4B419A849A500C099FA /* bts.png */,
+				967D296218955700002438CB /* combo_chart@2x.png */,
+				967D296318955700002438CB /* expandGlyph.png */,
+				967D296518955700002438CB /* ltc.png */,
+				967D296718955700002438CB /* ppc.png */,
+				967D296818955700002438CB /* pts.png */,
+				967D296918955700002438CB /* trade_icon_1.png */,
+				967D296A18955700002438CB /* trade_icon_1@2x.png */,
+			);
+			path = pics;
+			sourceTree = "<group>";
+		};
 		96E895AB1882323700F5E4E7 = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +193,7 @@
 		96E895B51882323700F5E4E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96E895B41882323700F5E4E7 /* testprice.app */,
+				96E895B41882323700F5E4E7 /* 小智慧.app */,
 				96E895D51882323700F5E4E7 /* testpriceTests.xctest */,
 			);
 			name = Products;
@@ -101,6 +202,7 @@
 		96E895B61882323700F5E4E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96E8962E1882BE5F00F5E4E7 /* QuartzCore.framework */,
 				96E895B71882323700F5E4E7 /* Foundation.framework */,
 				96E895B91882323700F5E4E7 /* CoreGraphics.framework */,
 				96E895BB1882323700F5E4E7 /* UIKit.framework */,
@@ -112,13 +214,25 @@
 		96E895BD1882323700F5E4E7 /* testprice */ = {
 			isa = PBXGroup;
 			children = (
+				967D295E18955700002438CB /* pics */,
+				96590C1E188D3B4200D17A8B /* MarketDetailView.h */,
+				96590C1F188D3B4200D17A8B /* MarketDetailView.m */,
+				96590C11188AC64B00D17A8B /* ProgressHUD */,
+				96E896301882C08D00F5E4E7 /* MJRefresh */,
+				96E899221886BA3F00F5E4E7 /* DataModel */,
 				96E895C61882323700F5E4E7 /* AppDelegate.h */,
 				96E895C71882323700F5E4E7 /* AppDelegate.m */,
 				96E895C91882323700F5E4E7 /* Main.storyboard */,
-				96E895CC1882323700F5E4E7 /* ViewController.h */,
-				96E895CD1882323700F5E4E7 /* ViewController.m */,
+				96E896811883B3BC00F5E4E7 /* NetWorker.h */,
+				96E896821883B3BC00F5E4E7 /* NetWorker.m */,
+				96E895CC1882323700F5E4E7 /* RootCoinViewController.h */,
+				96E895CD1882323700F5E4E7 /* RootCoinViewController.m */,
+				961DD03018882A0F0037D248 /* AddCoinViewController.h */,
+				961DD03118882A0F0037D248 /* AddCoinViewController.m */,
 				96E895CF1882323700F5E4E7 /* Images.xcassets */,
 				96E895BE1882323700F5E4E7 /* Supporting Files */,
+				96524BD018880AF500E33346 /* monitor_list.plist */,
+				96524BD218880B2A00E33346 /* market_coin.plist */,
 			);
 			path = testprice;
 			sourceTree = "<group>";
@@ -152,6 +266,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		96E896301882C08D00F5E4E7 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				96E896311882C08D00F5E4E7 /* MJRefresh.bundle */,
+				96E896321882C08D00F5E4E7 /* MJRefresh.h */,
+				96E896331882C08D00F5E4E7 /* MJRefreshBaseView.h */,
+				96E896341882C08D00F5E4E7 /* MJRefreshBaseView.m */,
+				96E896351882C08D00F5E4E7 /* MJRefreshConst.h */,
+				96E896361882C08D00F5E4E7 /* MJRefreshConst.m */,
+				96E896371882C08D00F5E4E7 /* MJRefreshFooterView.h */,
+				96E896381882C08D00F5E4E7 /* MJRefreshFooterView.m */,
+				96E896391882C08D00F5E4E7 /* MJRefreshHeaderView.h */,
+				96E8963A1882C08D00F5E4E7 /* MJRefreshHeaderView.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		96E899221886BA3F00F5E4E7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				96E896851883B41100F5E4E7 /* PriceDataSet.m */,
+				96E896841883B41100F5E4E7 /* PriceDataSet.h */,
+				96E896871883B46500F5E4E7 /* PriceDataElement.h */,
+				96E896881883B46500F5E4E7 /* PriceDataElement.m */,
+				96E899231886BABE00F5E4E7 /* Markets.h */,
+				96E899241886BABE00F5E4E7 /* Markets.m */,
+				96524BC21886CF7300E33346 /* MonitorPriceItem.h */,
+				96524BC31886CF7300E33346 /* MonitorPriceItem.m */,
+				96524BCD1887FFA500E33346 /* TableDataDelegate.h */,
+				96524BCE1887FFA500E33346 /* TableDataDelegate.m */,
+				96524BD41888191B00E33346 /* PickerDataDelegate.h */,
+				96524BD51888191B00E33346 /* PickerDataDelegate.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,7 +319,7 @@
 			);
 			name = testprice;
 			productName = testprice;
-			productReference = 96E895B41882323700F5E4E7 /* testprice.app */;
+			productReference = 96E895B41882323700F5E4E7 /* 小智慧.app */;
 			productType = "com.apple.product-type.application";
 		};
 		96E895D41882323700F5E4E7 /* testpriceTests */ = {
@@ -228,9 +378,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967D297518955700002438CB /* trade_icon_1.png in Resources */,
+				96590C15188AC64B00D17A8B /* ProgressHUD.bundle in Resources */,
+				967D296D18955700002438CB /* combo_chart.png in Resources */,
+				967D297118955700002438CB /* ltc.png in Resources */,
 				96E895D01882323700F5E4E7 /* Images.xcassets in Resources */,
 				96E895C21882323700F5E4E7 /* InfoPlist.strings in Resources */,
+				967D296E18955700002438CB /* combo_chart@2x.png in Resources */,
+				96BFC4B519A849A500C099FA /* bts.png in Resources */,
+				967D297418955700002438CB /* pts.png in Resources */,
+				96E8963B1882C08D00F5E4E7 /* MJRefresh.bundle in Resources */,
+				967D296F18955700002438CB /* expandGlyph.png in Resources */,
+				967D297618955700002438CB /* trade_icon_1@2x.png in Resources */,
+				96524BD118880AF500E33346 /* monitor_list.plist in Resources */,
 				96E895CB1882323700F5E4E7 /* Main.storyboard in Resources */,
+				967D296C18955700002438CB /* btc.png in Resources */,
+				967D297318955700002438CB /* ppc.png in Resources */,
+				96524BD318880B2A00E33346 /* market_coin.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +413,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E895CE1882323700F5E4E7 /* ViewController.m in Sources */,
+				96E8963E1882C08D00F5E4E7 /* MJRefreshFooterView.m in Sources */,
+				96E895CE1882323700F5E4E7 /* RootCoinViewController.m in Sources */,
+				96E8963F1882C08D00F5E4E7 /* MJRefreshHeaderView.m in Sources */,
 				96E895C81882323700F5E4E7 /* AppDelegate.m in Sources */,
+				96524BD61888191B00E33346 /* PickerDataDelegate.m in Sources */,
+				96590C16188AC64B00D17A8B /* ProgressHUD.m in Sources */,
+				96E8963C1882C08D00F5E4E7 /* MJRefreshBaseView.m in Sources */,
 				96E895C41882323700F5E4E7 /* main.m in Sources */,
+				96590C21188D3B4200D17A8B /* MarketDetailView.m in Sources */,
+				96E8963D1882C08D00F5E4E7 /* MJRefreshConst.m in Sources */,
+				96E896861883B41100F5E4E7 /* PriceDataSet.m in Sources */,
+				96E896891883B46500F5E4E7 /* PriceDataElement.m in Sources */,
+				96E896831883B3BC00F5E4E7 /* NetWorker.m in Sources */,
+				96524BCF1887FFA500E33346 /* TableDataDelegate.m in Sources */,
+				96E899251886BABE00F5E4E7 /* Markets.m in Sources */,
+				961DD03218882A0F0037D248 /* AddCoinViewController.m in Sources */,
+				96524BC41886CF7300E33346 /* MonitorPriceItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +559,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testprice/testprice-Prefix.pch";
 				INFOPLIST_FILE = "testprice/testprice-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "小智慧";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -394,7 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testprice/testprice-Prefix.pch";
 				INFOPLIST_FILE = "testprice/testprice-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "小智慧";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +638,7 @@
 				96E895E81882323700F5E4E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96E895E91882323700F5E4E7 /* Build configuration list for PBXNativeTarget "testpriceTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +647,7 @@
 				96E895EB1882323700F5E4E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

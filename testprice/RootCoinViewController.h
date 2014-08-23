@@ -26,6 +26,7 @@
 - (void)doneWithView;
 - (void) shadeOtherCells:(CGRect)rect;
 - (void) removeShade;
+- (void) refreshData;
 //@property (weak, nonatomic) IBOutlet UITextField *txtOut;
 @property (weak, nonatomic) IBOutlet UITextView *txtOut;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RootCoinViewController.h"
 
 @implementation AppDelegate
 
@@ -36,6 +37,9 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//    id test = (RootCoinViewController*)self.window.rootViewController;
+//    [test refreshData];
+    NSLog(@"123");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

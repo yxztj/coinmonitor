@@ -123,15 +123,22 @@ NSString *const MJTableViewCellIdentifier = @"Cell";
     UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] initWithTarget:self.tabledataDelegate action:@selector(deselectCell)];
     [self.upperShadeView addGestureRecognizer:tap1];
     [self.lowerShadeView addGestureRecognizer:tap2];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(refreshData:)
+                                                 name:UIApplicationDidBecomeActiveNotification object:nil];
     
-    
+    [self refreshData:nil];
+
+}
+
+- (void) refreshData:(NSNotification *)notification
+{
     [self.nworker.hasJobToDo lock];
     self.nworker.updateMain=YES;
     [self.nworker.hasJobToDo signal];
     [self.nworker.hasJobToDo unlock];
     
     [ProgressHUD show:@"正在刷新"];
-
 }
 
 - (void) shadeOtherCells:(CGRect)rect
